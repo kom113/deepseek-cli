@@ -1,0 +1,27 @@
+[package]
+name = "deepseek-cli"
+email = "yuqc2001@gmail.com"
+authors = ["Juan Gonzalez"]
+version = "0.1.1"
+edition = "2021"
+description = "Talk with deepseek model from your terminal"
+license = "MIT"
+repository = "https://github.com/kom113/deepseek-cli"
+keywords = ["deepseek", "ai", "cli", "chatbot"]
+
+[[bin]]
+name = "deepseek-cli"
+path = "src/main.rs"
+
+[dependencies]
+async-trait = "0.1"
+clap = { version = "4.2.2", features = ["derive"] }
+dirs = "4.0.0"
+futures = "0.3"
+reqwest = { version = "0.11", features = ["json", "stream"] }
+rustix = {version = "0.36.8", features = ["process"]}
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.93"
+sys-info = "0.9"
+tokio = { version = "1", features = ["full"] }
+

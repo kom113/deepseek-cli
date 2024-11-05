@@ -81,7 +81,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             messages,
         };
 
-        let response = send_request_to_openai(&client, data, &config).await?;
+        let response = send_request_to_deepseek(&client, data, &config).await?;
         let stream_renderer = Renderer::new();
         let answer = stream_renderer.render(response).await?;
 
@@ -176,7 +176,7 @@ fn get_messages_from_chatlog(
     Ok(messages)
 }
 
-async fn send_request_to_openai(
+async fn send_request_to_deepseek(
     client: &Client,
     data: ModelRequest,
     config: &Config,

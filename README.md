@@ -5,9 +5,9 @@ Talk to deepseek models from your terminal with small improvement from https://g
 - multi-round chats
 
 ## Quickstart
-- install
+- build
 ```
-cargo install deepseek-cli
+cargo build
 ```
 - export deepseek API Key as an environment variable
 ```
